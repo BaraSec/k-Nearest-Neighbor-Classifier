@@ -1,4 +1,3 @@
-#from random import shuffle
 import numpy as np
 
 def main():
@@ -14,9 +13,7 @@ def main():
  
     for vector in testData.readlines():
         test_data_arr.append(vector.rstrip('\n').split(","))
- 
-    #shuffle(data_arr)
- 
+  
     for i in range(0, len(training_data_arr[0])-1):
         mmNormalize(training_data_arr, max(float(maxX(training_data_arr, i)), float(maxX(test_data_arr, i))), min(float(minX(training_data_arr, i)), float(minX(test_data_arr, i))), i)
  
